@@ -1,24 +1,54 @@
-# README
+# Task Management
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## ERD
+![](https://i.imgur.com/Gr8X0vA.png)
 
-Things you may want to cover:
 
-* Ruby version
+## Table Schema
 
-* System dependencies
+* Users
 
-* Configuration
+| column    | datatype |
+| --------- | -------- |
+| id        | int      |
+| create_at | datetime |
+| update_at | datetime |
+| name      | string   |
+| password  | string   |
+| email     | string   |
 
-* Database creation
 
-* Database initialization
+* Tasks
 
-* How to run the test suite
+| column      | datatype |
+| ----------- | -------- |
+| id          | int      |
+| create_at   | datetime |
+| update_at   | datetime |
+| title       | string   |
+| description | text     |
+| start_at    | datetime |
+| end_at      | datetime |
+| user_id     | int      |
+| order       | int      |
+| status      | int      |
 
-* Services (job queues, cache servers, search engines, etc.)
+* Tags
+ 
+| column    | datatype |
+| --------- | -------- |
+| id        | int      |
+| create_at | datetime |
+| update_at | datetime |
+| name      | string   |
 
-* Deployment instructions
+* Taggings
 
-* ...
+| column    | datatype |
+| --------- | -------- |
+| id        | int      |
+| create_at | datetime |
+| update_at | datetime |
+| task_id   | int      |
+| tag_id    | int      |
+
